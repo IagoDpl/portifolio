@@ -1,0 +1,14 @@
+.middle {
+    display: flex;
+    position: absolute;
+    
+    
+}
+
+.heroIcon {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    margin-left: 1175px ;
+}

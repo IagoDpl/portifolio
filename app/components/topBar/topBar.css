@@ -1,0 +1,33 @@
+.topbar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    height: 8vh;
+}
+
+.menuIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
+    padding-left: 90%;
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+}
+
+.menuIcon:hover {
+    background-color: #bdf168;
+    opacity: 50%;
+    border-radius: 100%;
+}

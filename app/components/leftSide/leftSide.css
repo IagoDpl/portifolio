@@ -1,0 +1,49 @@
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    line-height: 120px;
+}
+
+h1 {
+    color: #bdf168;
+    font-size: 50px;
+    padding-left: 35px;
+}
+
+h2 {
+    color: #bdf168;
+    font-size: 120px;
+    padding-left: 80px;
+}
+
+h3 {
+    color: #bdf168;
+    font-size: 30px;
+    padding-left: 80px;
+}
+
+.menuIconsLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.menuIconLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+}
+
+.menuIconLeft:hover {
+    background-color: #6248f2;
+    opacity: 50%;
+    border-radius: 100%;
+}
