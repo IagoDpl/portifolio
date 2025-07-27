@@ -1,14 +1,43 @@
 .middle {
     display: flex;
-    position: absolute;
-    
-    
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add some padding */
+    width: 100%; /* Take full width within its container */
 }
 
 .heroIcon {
     display: flex;
-    position: absolute;
-    width: 300px;
+    width: 250px; /* Adjust size as needed */
     height: auto;
-    margin-left: 1175px ;
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Clip content for circular shape */
+    border: 5px solid #bdf168; /* Add a border with your accent color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.heroIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the area */
+    display: block;
+}
+
+/* Responsive adjustments for middle section */
+@media (min-width: 1024px) {
+  .middle {
+    flex: 1; /* Allow it to take available space */
+    justify-content: flex-end; /* Push image to the right on larger screens */
+    padding-right: 100px; /* Adjust spacing from right */
+  }
+  .heroIcon {
+    width: 300px; /* Larger on desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .heroIcon {
+    width: 200px; /* Smaller on tablets */
+    border-width: 3px;
+  }
 }

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import '@fontsource/roboto';
 
-
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -9,12 +8,50 @@
 
 html,
 body {
-  font-family: "Roboto";
-   background-image: linear-gradient(90deg, #6248f2 65%, #bdf168 35%);
+  font-family: "Roboto", sans-serif; /* Explicitly add sans-serif fallback */
+  background-image: linear-gradient(90deg, #6248f2 65%, #bdf168 35%);
+  margin: 0; /* Ensure no default body margin */
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+  body {
     color-scheme: dark;
+    /* You might want to adjust the gradient for dark mode or use a solid background */
+    background-image: linear-gradient(90deg, #1a1a1a 65%, #4a5a1a 35%); /* Example dark mode gradient */
   }
 }
 
+.main-content-area {
+  display: flex;
+  flex-direction: column; /* Default to column on small screens */
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 8vh); /* Adjust based on topbar height */
+}
 
+@media (min-width: 1024px) { /* Adjust breakpoint as needed for desktop layout */
+  .main-content-area {
+    flex-direction: row; /* Row layout on larger screens */
+    justify-content: space-around; /* Distribute items with space around them */
+    align-items: flex-start; /* Align items to the top */
+    padding: 40px;
+  }
+}
+
+/* Base styles for h1, h2, h3 from leftSide.css can be moved here or kept there */
+h1, h2, h3 {
+  font-family: "Inter", sans-serif; /* Use Inter for headings for consistency with theme */
+}
+
+/* General Link Styling */
+a {
+  color: inherit; /* Inherit color from parent by default */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover for clarity */
+}

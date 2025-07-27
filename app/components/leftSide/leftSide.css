@@ -1,49 +1,78 @@
 .leftSide {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    line-height: 120px;
+    gap: 30px; /* Reduced gap for tighter spacing */
+    line-height: 1.2; /* Better line height for readability */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center text on small screens */
+    width: 100%; /* Take full width on small screens */
 }
+
+@media (min-width: 1024px) {
+  .leftSide {
+    flex: 1; /* Allow it to take available space */
+    text-align: left; /* Align text to left on larger screens */
+    padding-left: 80px; /* Adjust spacing from left */
+  }
+}
+
 
 h1 {
     color: #bdf168;
-    font-size: 50px;
-    padding-left: 35px;
+    font-size: 3em; /* Adjusted for better scale */
+    padding-left: 0; /* Remove fixed padding */
+    margin-bottom: 0.2em;
 }
 
 h2 {
     color: #bdf168;
-    font-size: 120px;
-    padding-left: 80px;
+    font-size: 5em; /* Adjusted for better scale */
+    padding-left: 0; /* Remove fixed padding */
+    line-height: 1em; /* Ensure lines are close */
+    margin-bottom: 0.2em;
 }
 
 h3 {
     color: #bdf168;
-    font-size: 30px;
-    padding-left: 80px;
+    font-size: 1.5em; /* Adjusted for better scale */
+    padding-left: 0; /* Remove fixed padding */
+    margin-bottom: 2em; /* More space before icons */
 }
 
 .menuIconsLeft {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
-    gap: 24px;
-    padding-left: 10%;
-    padding-top: 5%;
+    justify-content: center; /* Center icons on small screens */
+    gap: 20px; /* Reduced gap */
+    padding-left: 0; /* Remove fixed padding */
+    padding-top: 20px; /* Adjusted padding */
 }
+
+@media (min-width: 1024px) {
+  .menuIconsLeft {
+    justify-content: flex-start; /* Align icons to left on larger screens */
+  }
+}
+
 
 .menuIconLeft {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-
+  width: 40px; /* Slightly smaller icons */
+  height: 40px;
 }
 
 .menuIconLeft:hover {
     background-color: #6248f2;
-    opacity: 50%;
-    border-radius: 100%;
+    opacity: 0.7; /* Slightly less opaque hover */
+    border-radius: 50%; /* Ensure perfect circle */
+}
+
+/* Ensure images within icons scale */
+.menuIconLeft img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
